@@ -1,0 +1,12 @@
+Independent circuit connectivity and Boolean verification
+Not a Logisim simulation run.
+E D M | Calculated L | Expected L
+0 0 0 |      0       |      0
+0 0 1 |      0       |      0
+0 1 0 |      0       |      0
+0 1 1 |      0       |      0
+1 0 0 |      1       |      1
+1 0 1 |      1       |      1
+1 1 0 |      0       |      0
+1 1 1 |      1       |      1
+PASS: all 8 combinations agree with the expected table.
