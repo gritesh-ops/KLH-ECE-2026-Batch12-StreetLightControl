@@ -41,8 +41,9 @@ This checker validates the supplied gate positions and wire connectivity and eva
 - `reports/`: project status and contribution template.
 
 ## Submission
-See `docs/GITHUB_SUBMISSION.md` for the supplied course rules. Each student must commit their own actual contributions using their own GitHub account. This package contains no manufactured commit history and has not been uploaded to GitHub.
+See `docs/GITHUB_SUBMISSION.md` for the supplied course rules. Each student must commit their own actual contributions using their own GitHub account. This reference package is uploaded to the team repository. Each member should add their actual contributions in subsequent commits.
 
 ## References
 - [Logisim NOT gate](https://www.cburch.com/logisim/docs/2.7/en/html/libs/gates/not.html)
 - [Logisim AND/OR gates](https://www.cburch.com/logisim/docs/2.7/en/html/libs/gates/basic.html)
+
