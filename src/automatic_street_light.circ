@@ -22,97 +22,82 @@
     <tool lib="6" name="Edit Tool"/>
   </toolbar>
 
-
   <circuit name="main">
 
-    <!-- Day/Night Sensor -->
+    <!-- Daylight Sensor: D -->
     <comp lib="0" name="Pin" loc="(80,100)">
       <a name="facing" val="east"/>
-      <a name="label" val="DAY_SENSOR"/>
+      <a name="label" val="D_DAYLIGHT"/>
     </comp>
 
-
-    <!-- Motion Sensor -->
+    <!-- Manual Override: M -->
     <comp lib="0" name="Pin" loc="(80,180)">
       <a name="facing" val="east"/>
-      <a name="label" val="MOTION_SENSOR"/>
+      <a name="label" val="M_MANUAL_OVERRIDE"/>
     </comp>
 
-
-    <!-- Enable Switch -->
+    <!-- System Enable: E -->
     <comp lib="0" name="Pin" loc="(80,260)">
       <a name="facing" val="east"/>
-      <a name="label" val="SYSTEM_ENABLE"/>
+      <a name="label" val="E_SYSTEM_ENABLE"/>
     </comp>
 
-
-    <!-- NOT Gate for Day Sensor -->
+    <!-- NOT Gate: D' -->
     <comp lib="1" name="NOT Gate" loc="(220,100)">
       <a name="facing" val="east"/>
     </comp>
 
-
-    <!-- OR Gate -->
-    <comp lib="1" name="OR Gate" loc="(370,130)">
+    <!-- OR Gate: D' + M -->
+    <comp lib="1" name="OR Gate" loc="(370,140)">
       <a name="facing" val="east"/>
       <a name="inputs" val="2"/>
     </comp>
 
-
-    <!-- AND Gate -->
-    <comp lib="1" name="AND Gate" loc="(520,150)">
+    <!-- AND Gate: E(D' + M) -->
+    <comp lib="1" name="AND Gate" loc="(520,160)">
       <a name="facing" val="east"/>
       <a name="inputs" val="2"/>
     </comp>
 
-
-    <!-- Output -->
-    <comp lib="0" name="Pin" loc="(650,150)">
+    <!-- Street Light Output -->
+    <comp lib="0" name="Pin" loc="(650,160)">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="STREET_LIGHT"/>
+      <a name="label" val="L_STREET_LIGHT"/>
     </comp>
-
 
     <!-- LED -->
     <comp lib="5" name="LED" loc="(600,240)">
       <a name="label" val="STREET_LIGHT_LED"/>
     </comp>
 
-
-
-    <!-- Connections -->
-
-    <!-- Day sensor to NOT -->
+    <!-- D -> NOT -->
     <wire from="(80,100)" to="(190,100)"/>
 
-    <!-- NOT output to OR -->
-    <wire from="(220,100)" to="(330,100)"/>
+    <!-- NOT(D) -> OR input 1 -->
+    <wire from="(250,100)" to="(300,100)"/>
+    <wire from="(300,100)" to="(300,130)"/>
+    <wire from="(300,130)" to="(350,130)"/>
 
+    <!-- M -> OR input 2 -->
+    <wire from="(80,180)" to="(300,180)"/>
+    <wire from="(300,180)" to="(300,150)"/>
+    <wire from="(300,150)" to="(350,150)"/>
 
-    <!-- Motion sensor to OR -->
-    <wire from="(80,180)" to="(280,180)"/>
-    <wire from="(280,180)" to="(280,150)"/>
-    <wire from="(280,150)" to="(330,150)"/>
+    <!-- OR -> AND input 1 -->
+    <wire from="(390,140)" to="(470,140)"/>
 
-
-    <!-- OR output to AND -->
-    <wire from="(370,130)" to="(470,130)"/>
-
-
-    <!-- Enable to AND -->
+    <!-- E -> AND input 2 -->
     <wire from="(80,260)" to="(430,260)"/>
-    <wire from="(430,260)" to="(430,170)"/>
-    <wire from="(430,170)" to="(470,170)"/>
+    <wire from="(430,260)" to="(430,180)"/>
+    <wire from="(430,180)" to="(470,180)"/>
 
+    <!-- AND -> Street Light Output -->
+    <wire from="(540,160)" to="(650,160)"/>
 
-    <!-- AND output -->
-    <wire from="(520,150)" to="(650,150)"/>
-
-
-    <!-- LED connection -->
-    <wire from="(600,150)" to="(600,240)"/>
-
+    <!-- AND -> LED -->
+    <wire from="(540,160)" to="(600,160)"/>
+    <wire from="(600,160)" to="(600,220)"/>
 
   </circuit>
 
