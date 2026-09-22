@@ -1,64 +1,60 @@
-Project Title
-Design and Simulation of an Automatic Street Light Control System
-Team Members
-Naga Sai Venkat Praveen — 2620040078
-N. Varun - 2620040048
-G.Ritesh - 2620040016
-Sujith Kumar — 2620040027
-College / Department
-Koneru Lakshmaiah University, Hyderabad
-Department of Digital Design and Computer Architecture
-Academic Year: 2026
-Project Overview
-What the automatic street-light system does.
-How daylight/darkness controls the lamp.
-Manual override and enable control.
-Objectives
-Automatic ON/OFF control
-Reduce unnecessary power consumption
-Implement digital logic
-Verify the design through simulation
-System Architecture
-Explain:
-Daylight Input + Manual Override + Enable → Logic Gates → Street Light
+# 🌃 Smart Street Light Control System
 
-Boolean Logic
-Your current project uses:
+## 📌 Project Overview
 
-L = E AND ((NOT D) OR M)
+The **Smart Street Light Control System** is an embedded electronics project developed by **KLH ECE 2026 Batch12**. The aim of this project is to design an automatic street lighting system that reduces power consumption by controlling street lights based on environmental conditions.
 
-Explain what D, E, M, and L mean.
+The system automatically detects day and night conditions using sensors and switches the street lights ON during darkness and OFF during daylight, eliminating the need for manual operation.
 
-Truth Table
-Include the 8 input combinations and expected lamp output.
-Hardware / Software
-Logisim / Logisim Evolution
-NOT gate
-OR gate
-AND gate
-LED/lamp output
-Optional Arduino/ESP32/LDR section only if you actually implemented it
-Simulation Results
-Screenshots of your Logisim circuit
-Screenshots for ON/OFF cases
-Truth-table verification
-Any actual observations
-Repository Structure
-Explain your folders:
-src/
-data/
-docs/
-results/
-reports/
-Conclusion
-A short paragraph explaining what you achieved.
-Team Contributions
-Mention what each member actually did.
-Presentation
-Link your PPT from the repository.
-Future Scope
-For example:
-LDR sensor integration
-PIR motion detection
-Automatic brightness control
-IoT monitoring
+---
+
+## 🎯 Objectives
+
+- Automate street light operation
+- Reduce unnecessary power consumption
+- Improve energy efficiency
+- Minimize human intervention
+- Develop a low-cost smart lighting solution
+
+---
+
+## ⚙️ Features
+
+✅ Automatic ON/OFF control of street lights  
+✅ Light intensity-based operation  
+✅ Energy-saving operation  
+✅ Low-cost hardware implementation  
+✅ Simple and reliable design  
+✅ Suitable for smart city applications  
+
+---
+
+## 🛠️ Hardware Components
+
+| Component | Description |
+|-----------|-------------|
+| Microcontroller | Main control unit |
+| LDR Sensor | Detects surrounding light intensity |
+| LED Lights | Represents street lights |
+| Relay Module | Controls high-power lights |
+| Resistors | Circuit protection |
+| Power Supply | Provides required voltage |
+| Connecting Wires | Circuit connections |
+
+---
+
+## 🔬 Working Principle
+
+The system works using a light sensing mechanism.
+
+1. The **LDR sensor** continuously monitors the surrounding light intensity.
+2. During daytime, sufficient light is detected and the street lights remain OFF.
+3. During nighttime, low light intensity is detected.
+4. The controller activates the street lights automatically.
+5. When daylight returns, the lights are switched OFF automatically.
+
+This process helps save electricity and improves automation.
+
+---
+
+## 🏗️ System Architecture
