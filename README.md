@@ -2,8 +2,8 @@ Project Title
 Design and Simulation of an Automatic Street Light Control System
 Team Members
 Naga Sai Venkat Praveen — 2620040078
-N. Varun — 2620040048
-M. Deepika — 2620040063
+N. Varun - 2620040048
+G.Ritesh - 2620040016
 Sujith Kumar — 2620040027
 College / Department
 Koneru Lakshmaiah University, Hyderabad
